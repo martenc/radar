@@ -1,51 +1,26 @@
-# Technology Radar
+# Technology Radar w/MongoDB Backend
 
-A simple technology radar map (made famous by [Thoughtworks](http://www.thoughtworks.com/radar)).
+[ ![Codeship Status for martenc/radar](https://codeship.com/projects/778f1fb0-9df0-0132-b04e-0a6e67eb63d6/status?branch=master)](https://codeship.com/projects/64661)
 
-> ##[Demo](http://urre.github.io/radar)
+A simple technology radar map (made famous by [Thoughtworks](http://www.thoughtworks.com/radar)). Started from Urre's repo, but I added a backend to it.
 
-## Make your own radar
+# Database Configuration
 
-Fork/clone this repo
+Create your own "database.js" file and mongodb. The contents of which will look like the below. You'll also need to create your own config/environmental vars (e.g. in Hebroku ours is named "process.env.adminpassword").
 
-	git clone git@github.com:urre/radar.git
+```
+module.exports = {
+	'dbconn' : 'mongodb://<dbuser>:<dbpassword>012345.mongolab.com:012345/your-tech-radar'
+};
+```
 
-### Add user info
 
-Edit ``user.json``. This is displayed in the header showing your Gravatar and your name with a link to Twitter. You can also specify your custom header image. Try a nice one from [Unsplash](http://unsplash.com).
-
-	{ "user":
-	    [
-	        {
-	            "name": "Urban Sandén",
-	            "email": "hej@urre.me",
-	            "website": "http://urre.me",
-	            "background": "https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?fit=crop&fm=jpg&h=700&q=75"
-	        }
-	    ]
-	}
-
-### Add blips
-
-Edit ``blips.json`` like this. Areas: techniques, tools, frameworks, platforms. Statuses: hold, assess, trial, adopt.
-
-	{ "blips":
-	    [
-	        {
-	            "title": "Node.js",
-	            "area": "platforms",
-	            "status": "trial",
-	            "link": "http://nodejs.org"
-	        },
-
-### Publish
-
-+ Publish using [Github Pages](https://pages.github.com/) by using the ``gh-pages`` branch.
-+ Fire up a browser and go to http://yourusername.github.io/radar
-
-Or simply just host it on your own server.
 
 ### Changelog
+
+#### 1.3.0
++ Added monogodb to store blips data
++ Added admin to manage blip data
 
 #### 1.2.0
 + New color scheme, new default background svg image

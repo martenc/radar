@@ -1,10 +1,10 @@
 { "user":
     [
         {
-            "name": "Urban Sandén",
-            "email": "hej@urre.me",
-            "website": "http://urre.me",
-            "background": "http://urre.github.io/radar/images/tiles.svg"
+            "name": "Marten Compoc",
+            "email": "martenc@gmail.com",
+            "website": "http://marten.io",
+            "background": "https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?fit=crop&fm=jpg&h=700&q=75"
         }
     ]
 }

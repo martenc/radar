@@ -27,6 +27,7 @@
 *.sqlite
 # node modules #
 /node_modules/*
+/config/*
 
 # OS generated files #
 ######################
