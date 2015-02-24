@@ -10,7 +10,6 @@ var hbs 			= require('hbs');
 var morgan       	= require('morgan');
 var bodyParser		= require('body-parser');
 
-var config 			= require('./config/database.js');
 var admin 			= require('./admin.js'); 
 var utils 			= require('./utils.js');
 
@@ -19,6 +18,7 @@ var utils 			= require('./utils.js');
 if (process.env.dbconn != undefined) {  // connect to our database
 	mongoose.connect(process.env.dbconn);
 } else {
+	var config = require('./config/database.js');
 	mongoose.connect(config.dbconn); 
 }
 
