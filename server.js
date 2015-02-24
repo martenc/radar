@@ -16,8 +16,11 @@ var utils 			= require('./utils.js');
 
 
 // configuration ===============================================================
-mongoose.connect(config.dbconn); // connect to our database
-
+if (process.env.dbconn != undefined) {  // connect to our database
+	mongoose.connect(process.env.dbconn);
+} else {
+	mongoose.connect(config.dbconn); 
+}
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
