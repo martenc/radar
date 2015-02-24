@@ -19,8 +19,9 @@ module.exports = {
 ### Changelog
 
 #### 1.3.0 (Marten's new stuff)
-+ Added monogodb to store blips data
++ Converted from static html to a nodejs app
 + Added admin to manage blip data
++ Using monogodb to store blips data
 
 ------------------------------------------------------
 
