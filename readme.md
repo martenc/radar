@@ -4,6 +4,9 @@
 
 A simple technology radar map (made famous by [Thoughtworks](http://www.thoughtworks.com/radar)). Started from Urre's repo, but I added a backend to it. Originally created by Urban Sanden prior to 1.3.0
 
+## Why and what is a Technology Radar? 
+http://nealford.com/memeagora/2013/05/28/build_your_own_technology_radar.html
+
 # Database Configuration
 
 Create your own "database.js" file and mongodb. The contents of which will look like the below. You'll also need to create your own config/environmental vars (e.g. in Hebroku ours is named "process.env.adminpassword").
