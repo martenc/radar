@@ -1,4 +1,4 @@
-module.exports = function(app, admin, utils) {
+module.exports = function(app, admin, blips, utils) {
 // normal routes ===============================================================
 	
 	// app.get('/', index.render);

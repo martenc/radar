@@ -10,8 +10,9 @@ var hbs 			= require('hbs');
 var morgan       	= require('morgan');
 var bodyParser		= require('body-parser');
 
-var admin 			= require('./admin.js'); 
-var utils 			= require('./utils.js');
+var admin 			= require('./app/admin.js'); 
+var blips			= require('./app/blip-logic.js');
+var utils 			= require('./app/utils.js');
 
 
 // configuration ===============================================================
@@ -40,7 +41,7 @@ app.use('/admin', utils.basicAuth(username, password));
 
 
 // routes ======================================================================
-require('./routes.js')(app, admin, utils); // load our routes and pass in our app 
+require('./app/routes.js')(app, admin, blips, utils); // load our routes and pass in our app 
 
 
 // launch ======================================================================
