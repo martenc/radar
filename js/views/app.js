@@ -46,7 +46,7 @@ Handlebars.registerHelper('gravatar', function(context, options) {
 
         // Get blip info from blips.json, using Handlebars
         getBlips: function() {
-            Radar.readBlips('blips.json', '#blipstmpl', '#blips');
+            Radar.readBlips( document.URL + 'api/blips', '#blipstmpl', '#blips');
         },
 
         readBlips: function (url, tplId, anchor) {

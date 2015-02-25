@@ -4,7 +4,7 @@
 
 A simple technology radar map (made famous by [Thoughtworks](http://www.thoughtworks.com/radar)). Started from Urre's repo, but I added a backend to it. Originally created by Urban Sanden prior to 1.3.0
 
-## Why and what is a Technology Radar? 
+## Why ...and what is a Technology Radar? 
 http://nealford.com/memeagora/2013/05/28/build_your_own_technology_radar.html
 
 # Database Configuration
@@ -16,7 +16,13 @@ module.exports = {
 	'dbconn' : 'mongodb://<dbuser>:<dbpassword>012345.mongolab.com:012345/your-tech-radar'
 };
 ```
+The example data (blips-og.json) is here for reference, but not used by this code. You'll want to import "blips-import.json" into your mongoDB as a starting point - it's formated to work with the mongoimport:
 
+```
+mongoimport -h ds012345.mongolab.com:12345 -d tech-radar -c <collection> -u <user> -p <password> --file <input file>
+```
+
+See the "Gulpfile.js" for build config. You'll need to build with Gulp if any of the scss or js/views/app.js are modified.
 
 
 ### Changelog
@@ -24,7 +30,7 @@ module.exports = {
 #### 1.3.0 (Marten's new stuff)
 + Converted from static html to a nodejs app
 + Added admin to manage blip data
-+ Using monogodb to store blips data
++ Using monogodb for storage
 
 ------------------------------------------------------
 

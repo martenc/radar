@@ -2,7 +2,22 @@ var Blip = require('../app/models/blip.js');
 var mongoose = require('mongoose');
 var hbs = require('hbs');
 var path = require('path');
+var fs = require('fs');
 
+
+// API ================================================================
+	
+exports.getBlips = function(req, res) {
+	Blip.find(function (err, blips) {
+		if (err) return next(err);
+		res.send('{ "blips":' + JSON.stringify(blips) + '}');
+		//res.json(blips);
+	});
+};
+
+
+// CRUD via admin =====================================================
+	
 exports.list = function(req, res){
 	Vote.find({}).exec(function(err, blip){
 		res.render('admin/blips.html', {

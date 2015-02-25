@@ -1,10 +1,12 @@
 module.exports = function(app, admin, blips, utils) {
-// normal routes ===============================================================
+
+	// API routes ===============================================================
 	
-	// app.get('/', index.render);
+	app.get('/api/blips', blips.getBlips);
 
 
-	//ADMIN///////////////////////////////////////////////////////////////////////
+	// normal routes ===============================================================
+	
 	app.get('/admin', function(req, res) {
 		
 		res.send('A Aron');
